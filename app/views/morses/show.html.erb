@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @morse.name %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @morse.message %>
+</p>
+
+<%= link_to 'Edit', edit_morse_path(@morse) %> |
+<%= link_to 'Back', morses_path %>

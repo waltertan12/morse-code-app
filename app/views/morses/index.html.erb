@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Morses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @morses.each do |morse| %>
+      <tr>
+        <td><%= morse.name %></td>
+        <td><%= morse.message %></td>
+        <td><%= link_to 'Show', morse %></td>
+        <td><%= link_to 'Edit', edit_morse_path(morse) %></td>
+        <td><%= link_to 'Destroy', morse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Morse', new_morse_path %>
