@@ -1,5 +1,10 @@
-<h1>New Morse</h1>
+<h1>Send Morse Code</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', morses_path %>
+<div class="container">
+<%= form_for(@morse) do |f| %>
+	<div class="field">
+	<%= f.text_area :message, placeholder: "Send a message..." %>
+	</div>
+	<%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
+</div>
